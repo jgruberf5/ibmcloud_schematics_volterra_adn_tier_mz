@@ -25,7 +25,7 @@ module "consul_cluster_vsis" {
   ibm_zone_3_subnet_id  = module.ibm_vpc.vpc_zone_3_inside_subnet_id
   consul_include        = var.consul_include
   consul_organization   = var.volterra_tenant_name
-  consul_datacenter     = "${var.ibm_vpc_name}-${var.ibm_region}"
+  consul_datacenter     = "${var.ibm_vpc_name}-${var.ibm_region}-${var.ibm_vpc_index}"
   consul_client_token   = var.consul_client_token
 }
 

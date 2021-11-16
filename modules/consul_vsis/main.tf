@@ -223,7 +223,7 @@ data "template_file" "consul_server_01" {
 
 # create server 01
 resource "ibm_is_instance" "consul_server_01_instance" {
-  name           = "${var.consul_datacenter}-consul-01"
+  name           = "${var.consul_datacenter}-consul-zone-1"
   count          = var.consul_include ? 1 : 0
   resource_group = data.ibm_resource_group.group.id
   image          = data.ibm_is_image.ubuntu.id
@@ -261,7 +261,7 @@ data "template_file" "consul_server_02" {
 
 # create server 02
 resource "ibm_is_instance" "consul_server_02_instance" {
-  name           = "${var.consul_datacenter}-consul-02"
+  name           = "${var.consul_datacenter}-consul-zone-2"
   count          = var.consul_include ? 1 : 0
   resource_group = data.ibm_resource_group.group.id
   image          = data.ibm_is_image.ubuntu.id
@@ -301,7 +301,7 @@ data "template_file" "consul_server_03" {
 
 # create server 03
 resource "ibm_is_instance" "consul_server_03_instance" {
-  name           = "${var.consul_datacenter}-consul-03"
+  name           = "${var.consul_datacenter}-consul-zone-3"
   count          = var.consul_include ? 1 : 0
   resource_group = data.ibm_resource_group.group.id
   image          = data.ibm_is_image.ubuntu.id
