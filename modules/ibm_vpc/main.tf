@@ -58,7 +58,7 @@ resource "ibm_is_subnet" "zone_1_inside" {
 }
 
 resource "ibm_is_public_gateway" "zone_1_outside_gateway" {
-  name = "${var.ibm_vpc_name}-outside-gateway"
+  name = "${var.ibm_vpc_name}-zone-1-outside-gateway"
   vpc  = ibm_is_vpc.vpc.id
   zone = "${var.ibm_region}-1"
 }
@@ -83,7 +83,7 @@ resource "ibm_is_subnet" "zone_2_inside" {
 }
 
 resource "ibm_is_public_gateway" "zone_2_outside_gateway" {
-  name = "${var.ibm_vpc_name}-outside-gateway"
+  name = "${var.ibm_vpc_name}-zone-2-outside-gateway"
   vpc  = ibm_is_vpc.vpc.id
   zone = "${var.ibm_region}-2"
 }
@@ -108,7 +108,7 @@ resource "ibm_is_subnet" "zone_3_inside" {
 }
 
 resource "ibm_is_public_gateway" "zone_3_outside_gateway" {
-  name = "${var.ibm_vpc_name}-outside-gateway"
+  name = "${var.ibm_vpc_name}-zone-3-outside-gateway"
   vpc  = ibm_is_vpc.vpc.id
   zone = "${var.ibm_region}-3"
 }
