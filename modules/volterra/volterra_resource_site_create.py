@@ -142,11 +142,11 @@ def assure_voltstack_site(tenant, token, site_name, tenant_id, cluster_size, lat
                 v_static_routes = []
                 for gw in inside_gateways:
                     v_static_routes.append(
-                     {
-                        "ip_prefixes": inside_networks,
-                        "ip_address": gw,
-                        "attrs": ['ROUTE_ATTR_INSTALL_HOST', 'ROUTE_ATTR_INSTALL_FORWARDING']
-                    })
+                        {
+                            "ip_prefixes": inside_networks,
+                            "ip_address": gw,
+                            "attrs": ['ROUTE_ATTR_INSTALL_HOST', 'ROUTE_ATTR_INSTALL_FORWARDING']
+                        })
                 url = "https://%s.console.ves.volterra.io/api/config/namespaces/system/voltstack_sites" % tenant
                 headers['volterra-apigw-tenant'] = tenant
                 headers['content-type'] = 'application/json'
@@ -653,7 +653,8 @@ def main():
         os.unlink(site_token_file)
     with open(site_token_file, "w") as site_token_file:
         site_token_file.write(site_token)
-    sys.stdout.write('Created registration token for the site: %s' % site_token)
+    sys.stdout.write(
+        'Created registration token for the site: %s' % site_token)
     sys.exit(0)
 
 

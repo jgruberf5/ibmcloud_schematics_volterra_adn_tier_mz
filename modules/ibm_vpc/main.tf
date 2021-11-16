@@ -133,5 +133,5 @@ resource "ibm_tg_connection" "ibm_tg_connect" {
   network_type = "vpc"
   name         = "${var.ibm_vpc_name}-${var.ibm_region}-${var.ibm_vpc_index}-connection"
   network_id   = ibm_is_vpc.vpc.resource_crn
-  depends_on   = [ibm_is_security_group_rule.allow_outbound, ibm_is_subnet.zone_3_inside, ibm_is_subnet.zone_3_outside]
+  depends_on   = [ibm_is_security_group_rule.allow_outbound, ibm_is_public_gateway.zone_1_outside_gateway, ibm_is_public_gateway.zone_2_outside_gateway, ibm_is_public_gateway.zone_3_outside_gateway]
 }
