@@ -1,6 +1,6 @@
 # Volterra ADN Routing Tier in IBM VPC Gen2
 
-![Workspace Diagram](https://github.com/jgruberf5/ibmcloud_schematics_volterra_adn_tier/raw/master/assets/ibmcloud_schematices_adn_adc_tier_diagram.jpg)
+![Workspace Diagram](https://github.com/jgruberf5/ibmcloud_schematics_volterra_adn_tier_mz/raw/master/assets/ibmcloud_schematices_adn_adc_tier_diagram.jpg)
 
 This Schematics Workspace module lifecycle manages:
 
@@ -50,5 +50,5 @@ You can utilize the Volterra module in the `modules/volterra` to deploy Volterra
 Simply change the github workspace repository reference to:
 
 ```bash
-https://github.com/jgruberf5/ibmcloud_schematics_volterra_adn_tier/modules/volterra
+https://github.com/jgruberf5/ibmcloud_schematics_volterra_adn_tier_mz/modules/volterra
 ```
